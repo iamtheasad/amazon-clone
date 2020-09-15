@@ -27,13 +27,4 @@ function App() {
     );
 }
 
-{/* React Router*/
-}
-{/*localhost.com*/
-}
-{/*localhost.com/login*/
-}
-{/*localhost.com/checkout*/
-}
-
 export default App;
