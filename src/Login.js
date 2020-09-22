@@ -43,7 +43,7 @@ const Login = () => {
             <div className="login__container">
                 <h1>Sign In</h1>
                 <form action="">
-                    <h5>E-mail</h5>
+                    <h5>Email</h5>
                     <input value={email} onChange={event => setEmail(event.target.value)} type="email" name="email"
                            id=""/>
                     <h5>Password</h5>
