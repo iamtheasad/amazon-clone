@@ -1,22 +1,7 @@
 import React from "react";
 
 export const initialState = {
-    basket: [
-        {
-            id: "3",
-            title: "COWIN E7 Active Noise Cancelling Headphones Bluetooth Headphones with Microphone..",
-            image: "https://cdn.pixabay.com/photo/2016/11/29/09/08/headphone-1868612__340.jpg",
-            price: 59.99,
-            rating: 5,
-        },
-        {
-            id: "3",
-            title: "COWIN E7 Active Noise Cancelling Headphones Bluetooth Headphones with Microphone..",
-            image: "https://cdn.pixabay.com/photo/2016/11/29/09/08/headphone-1868612__340.jpg",
-            price: 59.99,
-            rating: 5,
-        },
-    ],
+    basket: [],
     user: null,
 };
 
@@ -26,6 +11,11 @@ export const getBasketTotal = (basket)=>
 const reducer = (state, action) => {
     console.log(action);
     switch (action.type) {
+        case "SET_USER":
+            return {
+                ...state,
+                user: action.user
+            };
         case 'ADD_TO_BASKET':
             // Logic for adding item to Basket
             return {
@@ -58,6 +48,6 @@ const reducer = (state, action) => {
         default:
             return state;
     }
-}
+};
 
 export default reducer;

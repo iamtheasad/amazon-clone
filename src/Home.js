@@ -26,6 +26,7 @@ const Home = () => {
                        rating={4}
                    />
                </div>
+
                 <div className="home__row">
                     <Product
                         id="3"
@@ -49,6 +50,7 @@ const Home = () => {
                         rating={5}
                     />
                 </div>
+
                 <div className="home__row">
                     <Product
                         id="6"
