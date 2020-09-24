@@ -5,7 +5,7 @@ import CheckoutProduct from './CheckoutProduct';
 import Subtotal from "./Subtotal";
 
 const Checkout = () => {
-    const [{basket}] = useStateValue();
+    const [{basket, user}, dispatch] = useStateValue();
 
     return (
         <div className="checkout">
@@ -15,7 +15,7 @@ const Checkout = () => {
 
                 {basket?.length === 0 ? (
                     <div>
-                        <h2>Your Shopping Basket Empty</h2>
+                        <h2>{user?.email}  Your Shopping Basket Empty</h2>
                         < p> You have no items in your basket. To buy one or more items, click "Add to basket" next to
                             the
                             item</p>

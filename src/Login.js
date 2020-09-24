@@ -17,7 +17,7 @@ const Login = () => {
                 // logged in, redirect to the homepage...
                 history.push('/');
             })
-            .catch((e) => alert(e.message));
+            .catch((error) => alert(error.message));
     };
 
     const register = event => {
@@ -25,11 +25,14 @@ const Login = () => {
 
         // do the register logic....
         auth.createUserWithEmailAndPassword(email, password)
-            .then(auth => {
+            .then((auth) => {
                 // Created a user and logged in. Redirect to the homepage
-                history.push('/');
+                if (auth) {
+                    history.push('/');
+                }
+                // It successfully created a new user with email and password
             })
-            .catch((e) => alert(e.message));
+            .catch((error) => alert(error.message));
     };
 
     return (
