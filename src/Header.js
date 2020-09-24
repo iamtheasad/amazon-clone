@@ -16,7 +16,6 @@ function Header() {
 
     return (
         <nav className="header">
-
             <Link to="/">
                 <img className="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG25.png"
                      alt="Amazon Logo"/>

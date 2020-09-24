@@ -22,6 +22,7 @@ const Checkout = () => {
                     </div>
                 ) : (
                     <div>
+                        <h2>User Email: {user?.email}</h2>
                         <h2 className="checkout__title">Your Shopping Basket</h2>
 
                         {/*List out all of the checkout products*/}
